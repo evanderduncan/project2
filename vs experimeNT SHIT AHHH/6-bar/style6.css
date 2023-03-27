@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.rectangle {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(106, 106, 162);
+  }
+
+  .rectangle-back {
+    width: 200px;
+    height: 100px;
+    background-color: brown;
+  }
+
+  .background-image{
+    background-image: url('../background-images/Bar-scene.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height:100vh; 
+
+}

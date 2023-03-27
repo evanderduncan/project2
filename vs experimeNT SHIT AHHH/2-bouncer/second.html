@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    
+</head>
+<body>
+
+    
+    
+    <div class="background-image">
+
+        <a href="/3-bouncerTicket/bouncerTicket.html"> 
+            <div class="rectangle" id="myRectangle">continue past CAPTCHA sentiment</div>
+          </a>
+
+    </div>
+
+    <p>
+        club bouncer, "humans only" dont let you in until you complete sentiment CAPTCHA
+    </p>
+
+    <input type="checkbox" id="myCheckbox">
+    <label for="myCheckbox">Check me!</label>
+
+    <a href="/3-bouncerTicket/bouncerTicket.html" id="myButton" style="display: none;">Human entry permited</a>
+
+    <script>
+        
+        const checkbox = document.getElementById('myCheckbox');
+        const button = document.getElementById('myButton');
+
+        checkbox.addEventListener('change', (event) => {
+            if(event.target.checked){
+                console.log("Checkbox is checked");
+                button.style.display = 'block';
+            } else {
+                console.log("Checkbox is not checked");
+                button.style.display = 'none';
+            }
+        
+        });
+    
+    </script>
+
+    <a href="/1-entry/index.html">
+        <div class="rectangle-back">leave</div>
+    </a>
+
+
+
+</body>
+</html>

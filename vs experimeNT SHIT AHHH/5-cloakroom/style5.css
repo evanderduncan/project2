@@ -1,0 +1,96 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+.rectangle {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(106, 106, 162);
+  }
+
+  .rectangle-back {
+    width: 200px;
+    height: 100px;
+    background-color: brown;
+  }
+
+  .background-image{
+    background-image: url('../background-images/cloakroom.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height:100vh; 
+
+}
+
+/*
+  
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #4db2ec;
+}
+
+*/
+.wrapper{
+  width: 485px;
+  background: #9e5757;
+  border-radius: 10px;
+  padding: 22px 3px 40px;
+}
+
+#image-container{
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+#drag-image{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container{
+  width: 200px;
+  position: absolute;
+  background-color: aquamarine;
+}
+
+body {
+  background: darksalmon;
+}
+
+.fill {
+  background-image: url('https://www.bonmarche.co.uk/dw/image/v2/BBCZ_PRD/on/demandware.static/-/Sites-master-catalog-bonmarche/default/dw2569adbf/zoom/01/01943907_default.jpg?sw=500');
+  background-size: 100px;
+  position: relative;
+  height: 150px;
+  width: 100px;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+}
+
+.hold {
+  border: solid 5px #ccc;
+}
+
+.empty {
+  background-image: url('https://forwardtogether.org/wp-content/uploads/2016/01/wire-coat-hanger-1024x545.jpg');
+  background-size: 100px;
+  display: inline-block;
+  height: 160px;
+  width: 160px;
+  margin: 10px;
+  border: solid 3px salmon;
+  background: white;
+}
+
+.hovered {
+  background: #f4f4f4;
+  border-style: dashed;
+}

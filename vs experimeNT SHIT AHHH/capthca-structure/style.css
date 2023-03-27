@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#captcha-container{
+    margin: 0 auto;
+    width: 80%;
+}
+
+#captcha-image{
+    width:200px;
+    height:100px;
+    margin-bottom: 10px;
+}
+
+#verify-button{
+    margin-left: 10px;
+}
+
+#error-message{
+    color:red;
+}
+
+#continue-button{
+    text-align: center;
+}

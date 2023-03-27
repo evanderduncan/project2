@@ -1,0 +1,74 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.rectangle {
+  position: absolute;
+  top: 70%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+    width: 300px;
+    height: 360px;
+    background-color: rgb(106, 106, 162);
+  }
+
+  .rectangle-back {
+    width: 180px;
+    height: 100px;
+    background-color: brown;
+  }
+
+  .background-image{
+    background-image: url('../background-images/bouncer.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height:100vh; 
+}
+
+ 
+
+input[type="checkbox"]{
+  position :relative;
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  appearance: none;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+input[type="checkbox"] + label {
+  position: relative;
+  font-weight: bold;
+}
+
+input[type="checkbox"]:checked::before{
+  content: '\2714';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #4caf50;
+}
+
+#myButton{
+  display: none;
+  padding: 10px 20px;
+  border: 2px solid #ccc;
+  border-radius:5px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+/*style the button when mouse hovers over */
+#myButton:hover{
+  border-color: #4caf50;
+  background-color: #4caf50;
+  color: #fff;
+}

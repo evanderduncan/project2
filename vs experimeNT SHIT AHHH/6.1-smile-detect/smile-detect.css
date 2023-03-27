@@ -1,0 +1,38 @@
+body {
+    background-image: url('../background-images/Phrase-Recognition.png');
+    background-repeat: no-repeat;
+    height:100%;
+    width:100%;
+  }
+  
+  #canvas{
+    position: relative;
+    top: 10px;
+    left: 0px;
+    z-index:1;
+  }
+  
+  #video{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index:0;
+    border: 3px #fff solid;
+      border-radius: 10px;
+  }
+
+  .rectangle {
+    position: relative;
+    left:50%;
+    width: 200px;
+    height: 100px;
+    background-color: rgb(106, 106, 162);
+  }
+
+  .rectangle-back {
+    position:relative;
+    left: 50%;
+    width: 200px;
+    height: 100px;
+    background-color: brown;
+  }

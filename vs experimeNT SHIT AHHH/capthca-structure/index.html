@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- p5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/addons/p5.sound.min.js"></script>
+    <!-- ml5 -->
+     
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="myButton">Click me!</button>
+
+    <div id="captcha-container">
+        <p>Please complete the CAPTCHA verification:</p>
+        <input type="text" id="captcha-input" placeholder="Enter the CAPTCHA">
+        <button id="verify-button" onlick="verifyCaptcha()">Verify</button>
+        <p id="captcha-status"></p>
+    </div>
+    
+    <div id="continue-container" style="display: none;">
+        <p>CAPTCHA verification completed!</p>
+        <a href="continue-page.html">Continue!</a>
+    </div>
+<script>
+    function setup() {
+        // noCanvas();
+// initialize sentiment
+         sentiment = ml5.sentiment("movieReviews", modelReady);
+ // setup the html environment
+         const inputBox = document.getElementById('Input');
+     //   inputBox = createInput("enter sentimental text here to continue");
+     //   inputBox.attribute("size", "75");
+     const submitBtn = document.getElementById('button');
+      //   submitBtn = createButton("submit");
+         sentimentResult = createP("sentiment score:");
+
+// predicting the sentiment on mousePressed()
+         submitBtn.mousePressed(getSentiment);
+}
+
+function getSentiment() {
+// get the values from the input
+const text = inputBox.value();
+
+// make the prediction
+const prediction = sentiment.predict(text);
+
+// display sentiment result on html page
+sentimentResult.html("sentiment score: " + prediction.score);
+// display visual sentiment result
+if (prediction.score > 0.7) {
+ createP("positive ");
+ var button = document.createElement("dfdfd");
+ button.href = "/6-bar/bar.html";
+ button.innerHTML = "Click here to get rid of your coat";
+ document.body.appendChild(button);
+} else {
+ createP("negative ");
+}
+}
+
+function modelReady() {
+// model is ready
+statusEl.html("model loaded");
+}
+</script> 
+</body>
+</html>
+
+
+
+

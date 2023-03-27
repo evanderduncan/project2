@@ -1,0 +1,37 @@
+html, body{
+    margin:0;
+    padding:0;
+    cursor: url("../background-images/Pointer-2.png"), move;
+}
+
+a{
+    cursor: url("../background-images/Select.png"), default;
+  }
+
+.background-image{
+    background-image: url('../background-images/Intro.png');
+    padding: 0;
+  background-repeat: no-repeat;
+   
+     height:120vh;
+    background-size: 100% 100%;
+}
+
+.rectangle {
+    position: absolute;
+    top: 35%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width: 2300px;
+    height: 500px;
+    background-color: none;
+  }
+
+  #rectangle:hover {
+    background-image: url('../background-images/Intro2.png');
+    padding: 0;
+    background-repeat: no-repeat;
+   
+     height:120vh;
+    background-size: 100% 100%;
+ }

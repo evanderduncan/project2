@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- p5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/addons/p5.sound.min.js"></script>
+    <!-- ml5 -->
+    <link rel="stylesheet" type="text/css" href="style5.css" href="//fonts.googleapis.com/css?family=Ubuntu">
+    <script src = "coatdrag.js"></script>
+</head>
+<body>
+    
+    <p>
+        the cloakroom. do a voice tone CAPTCHA to dump ur coat
+    </p>
+        <div class="background-image">
+        <a href="/6-bar/bar.html">
+        <div class="rectangle" id="myRectangle">pass CAPTCHA to get get rid of coat</div>
+
+        <a href="/4-inside/inside-club.html">
+            <div class="rectangle-back">back off</div>
+        </a>
+        </a>
+    </div>
+        <p>
+        some interaction that drags coat from ur side to the hand of cloakroom staff, get ticket for cloakroom
+      </p>
+
+    <div class = "wrapper">
+            <form>
+                <label for="Input">enter sentimental text:</label>
+                <input type="text" id="Input" name="Input">
+                <button type="button" id="button" onClick="submitFunction()">submit sentiment</button>
+            </form>
+    </div>
+    */
+    
+   
+   <div class = "container">
+    
+    <script src="https://unpkg.com/ml5@0.6.1/dist/ml5.min.js"></script>
+    <script ref="sentimental" src="sentimental.js"></script>
+      <script>
+        let sentiment;
+        let statusEl;
+        let submitBtn;
+        let inputBox;
+        let sentimentResult;
+
+        function setup() {
+           // noCanvas();
+  // initialize sentiment
+            sentiment = ml5.sentiment("movieReviews", modelReady);
+    // setup the html environment
+            const inputBox = document.getElementById('Input');
+        //   inputBox = createInput("enter sentimental text here to continue");
+        //   inputBox.attribute("size", "75");
+        const submitBtn = document.getElementById('button');
+         //   submitBtn = createButton("submit");
+            sentimentResult = createP("sentiment score:");
+
+  // predicting the sentiment on mousePressed()
+            submitBtn.mousePressed(getSentiment);
+}
+
+function getSentiment() {
+  // get the values from the input
+  const text = inputBox.value();
+
+  // make the prediction
+  const prediction = sentiment.predict(text);
+
+  // display sentiment result on html page
+  sentimentResult.html("sentiment score: " + prediction.score);
+  // display visual sentiment result
+  if (prediction.score > 0.7) {
+    createP("positive ");
+    var button = document.createElement("dfdfd");
+    button.href = "/6-bar/bar.html";
+    button.innerHTML = "Click here to get rid of your coat";
+    document.body.appendChild(button);
+  } else {
+    createP("negative ");
+  }
+}
+
+function modelReady() {
+  // model is ready
+  statusEl.html("model loaded");
+}
+</script>
+</div> 
+
+    
+</body>
+</html>
+
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+
+        <body>
+            <div class="rectangle"></div>
+      
+            <div class="figure">
+                <img class="image-main" src="https://demo.sirv.com/hc/Bose-700-a.jpg?w=360" srcset="https://demo.sirv.com/hc/Bose-700-a.jpg?w=720 2x" alt="Demo image 1">
+                <img class="image-hover" src="https://demo.sirv.com/hc/Bose-700-b.jpg?w=360" srcset="https://demo.sirv.com/hc/Bose-700-b.jpg?w=720 2x" alt="Demo image 2">
+              </div>
+
+              <style>
+                /*  Rollover image styles  */
+                .figure {
+                  position: relative;
+                  width: 360px; /* can be omitted for a regular non-lazy image */
+                  max-width: 100%;
+                }
+                .figure img.Sirv.image-hover {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  left: 0;
+                  bottom: 0;
+                  object-fit: contain;
+                  opacity: 0;
+                  transition: opacity .2s;
+                }
+                .figure:hover img.Sirv.image-hover {
+                  opacity: 1;
+                }
+              </style>
+        </body>
+
+
+</html>
+
